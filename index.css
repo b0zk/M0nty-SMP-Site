@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    height: 100vh;
+    background: #000;
+}
+
+.main-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.backdrop-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px) brightness(0.65);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.topnav {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin: 20px;
+    padding: 18px 28px;
+
+    background: linear-gradient(180deg,
+            rgba(60, 60, 60, 0.95),
+            rgba(35, 35, 35, 0.95));
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.logo-image {
+    max-width: 70px;
+    image-rendering: pixelated;
+    margin-right: 10px;
+    padding-right: 20px;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.topnav a {
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    color: #e6e6e6;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.topnav a:hover {
+    color: #00ffcc;
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+.nav-active {
+    color: #6dff4a;
+    background-color: rgba(0, 0, 0, 0.45);
+    transform: scale(1.1);
+}
+.hero {
+    position: relative;
+    z-index: 1;
+
+    height: calc(100vh - 120px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.server-ip {
+    background-color: rgba(82, 82, 82, 0.95);
+    padding: 25px 30px;
+    border-radius: 14px;
+
+    font-size: 16px;
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.server-ip code {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: rgba(45, 45, 45, 0.95);
+    padding: 15px 18px;
+
+    border-radius: 10px;
+}
+
+.copy-ip-button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.copy-ip-button:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+.extra-content {
+    position: relative;
+    z-index: 1;
+
+    margin: 20px;
+    padding: 30px;
+
+    background-color: rgba(82, 82, 82, 0.95);
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.content-card a {
+    color: white;
+    font-size: 14px;
+}
