@@ -55,6 +55,7 @@ body {
     image-rendering: pixelated;
     margin-right: 10px;
     padding-right: 20px;
+    border-radius: 30px;
     border-right: 2px solid rgba(255, 255, 255, 0.1);
 }
 
